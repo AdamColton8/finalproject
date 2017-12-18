@@ -22,17 +22,32 @@
 	</nav>
 	<main>
 		<div class="container">
-		<div class="slider">
-			<div>
-				<img src="img/crm-img.png">
-			</div>
-			<div>
-				<img src="img/crm-img1.png">
-			</div>
-			<div>
-				<img src="img/crm-img2.png">
-			</div>
-		</div>
+			<form class="form_wrap" action="#" method="post">
+				<div>
+					<label for="task_name">Название задачи</label>
+					<input class="value_task-name" id="task_name" type="text" placeholder="Task 1">
+				</div>
+				<div>
+					<label for="task_description">Описание задачи:</label>
+					<textarea class="value_task-description" id="task_description" placeholder="Text inside"></textarea>
+				</div>
+				
+				<div class="dropdown">
+					<button onclick="myFunction()" class="dropbtn">Выбрать статус</button>
+					<div id="myDropdown" class="dropdown-content">
+						<a href="#">В работе</a>
+						<a href="#">Завершено</a>
+						<a href="#">Удалено</a>
+						<a href="#">Тестирование</a>
+					</div>
+					<button type="submit" class="button_prime">+ Добавить задание</button>
+					<button type="submit" class="button_alert">- Удалить задание</button>
+				</div>
+				
+				
+			</form>
+
+
 		</div>
 	</main>
 
