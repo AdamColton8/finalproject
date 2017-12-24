@@ -1,26 +1,46 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Final Project</title>
 
 
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="css/slick.css" />
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/left-nav-style.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
 
 </head>
+
 <body>
 
+
 	<nav>
-		<a href="#">Home</a>
-		<a href="#">Admin panel</a>
-		<a href="#">Contacts</a>
-		<a href="#">Login</a>
+		<a href="index.html">Home</a>
+		<a href="dashboard.html">Admin panel</a>
+		<a href="contacts.html">Contacts</a>
+		<a href="login.html">Login</a>
+		
 	</nav>
+
 	<main>
+    <input type="checkbox" id="nav-toggle" hidden>
+	<div class="nav">
+        <label for="nav-toggle" class="nav-toggle" onclick></label>
+        <ul>
+            <li><a href="#1">Один</a>
+            <li><a href="#2">Два</a>
+            <li><a href="#3">Три</a>
+            <li><a href="#4">Четыре</a>
+            <li><a href="#5">Пять</a>
+            <li><a href="#6">Шесть</a>
+            <li><a href="#7">Семь</a> 
+        </ul>
+    </div>
 		<div class="container">
 			<form class="form_wrap" action="#" method="post">
 				<div>
@@ -31,24 +51,93 @@
 					<label for="task_description">Описание задачи:</label>
 					<textarea class="value_task-description" id="task_description" placeholder="Text inside"></textarea>
 				</div>
-				
-				<div class="dropdown">
-					<button onclick="myFunction()" class="dropbtn">Выбрать статус</button>
-					<div id="myDropdown" class="dropdown-content">
-						<a href="#">В работе</a>
-						<a href="#">Завершено</a>
-						<a href="#">Удалено</a>
-						<a href="#">Тестирование</a>
-					</div>
-					<button type="submit" class="button_prime">+ Добавить задание</button>
-					<button type="submit" class="button_alert">- Удалить задание</button>
+				<div class="rangelist">
+					<input type="range" list="tickmarks" min="0" max="100">
+
+					<datalist id="tickmarks">
+						<option value="0" label="0%">
+							<option value="10">
+								<option value="20">
+									<option value="30">
+										<option value="40">
+											<option value="50" label="50%">
+												<option value="60">
+													<option value="70">
+														<option value="80">
+															<option value="90">
+																<option value="100" label="100%">
+					</datalist>
 				</div>
-				
-				
+				<button type="submit" class="button_prime">
+					<i class="fa fa-plus space_between" aria-hidden="true"></i> Добавить задание</button>
+
 			</form>
 
+			<div>
+				<table class="table_main">
+					<thead>
+						<tr>
+							<th># <i class="fa fa-arrows-v space_around" aria-hidden="true"></i></th>
+							<th>Кем выдан <i class="fa fa-arrows-v space_around" aria-hidden="true"></i></th>
+							<th>Статус задания <i class="fa fa-arrows-v space_around" aria-hidden="true"></i></th>
+							<th>Процент выполнения <i class="fa fa-arrows-v space_around" aria-hidden="true"></i></th>
+							<th>Удалить задание <i class="fa fa-arrows-v space_around" aria-hidden="true"></i></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>1</th>
+							<td>Mark</td>
+							<td>
+								<div class="dropdown">
+									<button onclick="myFunction()" class="dropbtn" type="button">Выбрать статус</button>
+									<div id="myDropdown" class="dropdown-content">
+										<a href="#">В работе</a>
+										<a href="#">Завершено</a>
+										<a href="#">Удалено</a>
+										<a href="#">Тестирование</a>
+									</div>
+							</td>
+							<td>30%</td>
+							<td>
+								<button type="submit" class="button_alert">
+									<i class="fa fa-trash-o" aria-hidden="true"></i>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<th>2</th>
+							<td>Jacob</td>
+							<td>Завершен</td>
+							<td>100%</td>
+							<td>
+								<button type="submit" class="button_alert">
+									<i class="fa fa-trash-o" aria-hidden="true"></i>
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<th>3</th>
+							<td>Larry</td>
+							<td>Тестирование</td>
+							<td>80%</td>
+							<td>
+								<button type="submit" class="button_alert">
+									<i class="fa fa-trash-o" aria-hidden="true"></i>
+								</button>
+							</td>
+						</tr>
+					</tbody>
 
-		</div>
+				</table>
+				<button type="submit" class="button_prime">
+					<i class="fa fa-plus space_between" aria-hidden="true"></i> Добавить задание</button>
+				</div>
+			</div>
+
+
+
+
 	</main>
 
 
@@ -58,10 +147,19 @@
 				Tarutin Y.O. © 2017
 			</span>
 			<div class="share-buttons">
-				<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.facebook.com/adamcolton95" class=""><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a>
-				<a href="https://twitter.com/home?status=Tarutin%20Y.O." class=""><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-				<a href="https://plus.google.com/share?url=https%3A//www.facebook.com/adamcolton95" class=""><i class="fa fa-google fa-2x" aria-hidden="true"></i></a>
-				<a href="https://www.linkedin.com/shareArticle?mini=true&url=www.linkedin.com/in/yulii-tarutin-994249152&title=Tarutin%20Y.O.&summary=&source=" class=""><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+				<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.facebook.com/adamcolton95" class="">
+					<i class="fa fa-facebook-official fa-2x space_between" aria-hidden="true"></i>
+				</a>
+				<a href="https://twitter.com/home?status=Tarutin%20Y.O." class="">
+					<i class="fa fa-twitter fa-2x space_between" aria-hidden="true"></i>
+				</a>
+				<a href="https://plus.google.com/share?url=https%3A//www.facebook.com/adamcolton95" class="">
+					<i class="fa fa-google fa-2x space_between" aria-hidden="true"></i>
+				</a>
+				<a href="https://www.linkedin.com/shareArticle?mini=true&url=www.linkedin.com/in/yulii-tarutin-994249152&title=Tarutin%20Y.O.&summary=&source="
+				 class="">
+					<i class="fa fa-linkedin fa-2x space_between" aria-hidden="true"></i>
+				</a>
 			</div>
 		</div>
 
@@ -69,8 +167,9 @@
 
 
 
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/slick.min.js"></script>
-<script src="js/app.js"></script>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/app.js"></script>
 </body>
+
 </html>

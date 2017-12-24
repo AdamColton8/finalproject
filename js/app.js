@@ -5,7 +5,8 @@ $(document).ready(function () {
         autoplay: true,
         autoplaySpeed: 3000,
         infinite: true,
-        dots: true
+        dots: true,
+        centerMode: true
     });
 });
 
@@ -30,3 +31,31 @@ window.onclick = function(event) {
     }
 }
 
+
+
+
+
+function initMap() {
+    var uluru = {lat: 49.229, lng: 28.47};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 11,
+      center: uluru
+    });
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+  }
+
+ 
+
+  $('[data-fancybox="images"]').fancybox({
+    thumbs : {
+      autoStart : true
+    },
+    buttons : [
+      'zoom',
+      'close'
+    ]
+  });
+  
