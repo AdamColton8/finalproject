@@ -3,6 +3,8 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Final Project</title>
 
 
@@ -14,41 +16,55 @@
 
 </head>
 
+<header>
+		<div class="container jc_center">
+			<nav class="header_menu">
+				<a href="index.html">Home</a>
+				<a href="dashboard.html">Admin panel</a>
+				<a href="contacts.html">About Us</a>
+				<a href="login.html">Login</a>
+			</nav>
+		</div>
+	</header>
+
 <body>
 
-	<nav>
-		<a href="index.html">Home</a>
-		<a href="dashboard.html">Admin panel</a>
-		<a href="contacts.html">About Us</a>
-		<a href="login.html">Login</a>
-	</nav>
-	<main>
-			<div class="breadcrumb_wrap">
-					<ul class="breadcrumb">
-					  <li><a href="#">Login</a></li>
-					  <li>Login</li>
-					</ul>
-			</div>
-			<form id="loginForm" action="" method="post">
 
-					<div class="field">
-						<label>Имя пользователя:</label>
-						<div class="input"><input type="text" name="" value="" id="login" /></div>
-					</div>
-				
-					<div class="field">
-						<a href="#" id="forgot">Забыли пароль?</a>
-						<label>Пароль:</label>
-						<div class="input"><input type="password" name="" value="" id="pass" /></div>
-					</div>
-				
-					<div class="submit">
-						<button type="submit">Войти</button>
-						<label id="remember"><input name="" type="checkbox" value="" /> Запомнить меня</label>
-					</div>
-				
-				</form>
-			
+	<main>
+		<div class="container">
+		<div class="breadcrumb_wrap">
+			<ul class="breadcrumb">
+				<li>
+					<a href="#">Login</a>
+				</li>
+				<li>Login</li>
+			</ul>
+		</div>
+		<form id="loginForm" action="" method="post">
+
+			<div class="field">
+				<label>Имя пользователя:</label>
+				<div class="input">
+					<input type="text" name="" value="" id="login" />
+				</div>
+			</div>
+
+			<div class="field">
+				<a href="#" id="forgot">Забыли пароль?</a>
+				<label>Пароль:</label>
+				<div class="input">
+					<input type="password" name="" value="" id="pass" />
+				</div>
+			</div>
+
+			<div class="submit">
+				<button type="submit">Войти</button>
+				<label id="remember">
+					<input name="" type="checkbox" value="" /> Запомнить меня</label>
+			</div>
+
+		</form>
+	</div>
 	</main>
 
 

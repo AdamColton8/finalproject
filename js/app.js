@@ -6,9 +6,26 @@ $(document).ready(function () {
         autoplaySpeed: 3000,
         infinite: true,
         dots: true,
-        centerMode: true
+        centerMode: true,
+        slidesToShow: 1,
+        responsive: [
+            {
+              breakpoint: 885,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: false,
+                arrows: false,
+              }
+            }
+        ]
     });
+    
 });
+
+
+
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
