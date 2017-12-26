@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Final Project</title>
 
-
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/slick.css" />
 	<link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
@@ -15,8 +15,8 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
-
-<header>
+<div class="wrapper_main">
+	<header>
 		<div class="container jc_center">
 			<nav class="header_menu">
 				<a href="index.html">Home</a>
@@ -27,76 +27,78 @@
 		</div>
 	</header>
 
-<body>
+	<body>
 
 
-	<main>
-		<div class="container">
-		<div class="breadcrumb_wrap">
-			<ul class="breadcrumb">
-				<li>
-					<a href="#">Login</a>
-				</li>
-				<li>Login</li>
-			</ul>
-		</div>
-		<form id="loginForm" action="" method="post">
+		<main>
+			<div class="container">
+				<div class="breadcrumb_wrap">
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Login</a>
+						</li>
+						<li>Login</li>
+					</ul>
+				</div>
+				<div class="login_wrap fadeInLeft animated">
+				<form class="slideDown" id="loginForm" action="" method="post">
 
-			<div class="field">
-				<label>Имя пользователя:</label>
-				<div class="input">
-					<input type="text" name="" value="" id="login" />
+					<div class="field">
+						<label>Имя пользователя:</label>
+						<div class="input">
+							<input type="text" name="" value="" id="login" />
+						</div>
+					</div>
+
+					<div class="field">
+						<a href="#" id="forgot">Забыли пароль?</a>
+						<label>Пароль:</label>
+						<div class="input">
+							<input type="password" name="" value="" id="pass" />
+						</div>
+					</div>
+
+					<div class="submit">
+						<button type="submit">Войти</button>
+						<label id="remember">
+							<input name="" type="checkbox" value="" /> Запомнить меня</label>
+					</div>
+
+				</form>
+			</div>
+			</div>
+		</main>
+
+
+		<footer>
+			<div class="main-footer">
+				<span class="footer_text">
+					Tarutin Y.O. © 2017
+				</span>
+				<div class="share-buttons">
+					<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.facebook.com/adamcolton95" class="">
+						<i class="fa fa-facebook-official fa-2x space_between" aria-hidden="true"></i>
+					</a>
+					<a href="https://twitter.com/home?status=Tarutin%20Y.O." class="">
+						<i class="fa fa-twitter fa-2x space_between" aria-hidden="true"></i>
+					</a>
+					<a href="https://plus.google.com/share?url=https%3A//www.facebook.com/adamcolton95" class="">
+						<i class="fa fa-google fa-2x space_between" aria-hidden="true"></i>
+					</a>
+					<a href="https://www.linkedin.com/shareArticle?mini=true&url=www.linkedin.com/in/yulii-tarutin-994249152&title=Tarutin%20Y.O.&summary=&source="
+					 class="">
+						<i class="fa fa-linkedin fa-2x space_between" aria-hidden="true"></i>
+					</a>
 				</div>
 			</div>
 
-			<div class="field">
-				<a href="#" id="forgot">Забыли пароль?</a>
-				<label>Пароль:</label>
-				<div class="input">
-					<input type="password" name="" value="" id="pass" />
-				</div>
-			</div>
+		</footer>
 
-			<div class="submit">
-				<button type="submit">Войти</button>
-				<label id="remember">
-					<input name="" type="checkbox" value="" /> Запомнить меня</label>
-			</div>
+</div>
 
-		</form>
-	</div>
-	</main>
-
-
-	<footer>
-		<div class="main-footer">
-			<span class="footer_text">
-				Tarutin Y.O. © 2017
-			</span>
-			<div class="share-buttons">
-				<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.facebook.com/adamcolton95" class="">
-					<i class="fa fa-facebook-official fa-2x space_between" aria-hidden="true"></i>
-				</a>
-				<a href="https://twitter.com/home?status=Tarutin%20Y.O." class="">
-					<i class="fa fa-twitter fa-2x space_between" aria-hidden="true"></i>
-				</a>
-				<a href="https://plus.google.com/share?url=https%3A//www.facebook.com/adamcolton95" class="">
-					<i class="fa fa-google fa-2x space_between" aria-hidden="true"></i>
-				</a>
-				<a href="https://www.linkedin.com/shareArticle?mini=true&url=www.linkedin.com/in/yulii-tarutin-994249152&title=Tarutin%20Y.O.&summary=&source="
-				 class="">
-					<i class="fa fa-linkedin fa-2x space_between" aria-hidden="true"></i>
-				</a>
-			</div>
-		</div>
-
-	</footer>
-
-
-
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/slick.min.js"></script>
-	<script src="js/app.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/app.js"></script>
 </body>
 
 </html>

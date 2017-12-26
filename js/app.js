@@ -71,8 +71,14 @@ function initMap() {
       autoStart : true
     },
     buttons : [
-      'zoom',
       'close'
     ]
   });
   
+
+//   var app = new Vue({
+//     el: '#app',
+//     data: {
+//       message: 'Hello Vue!'
+//     }
+//   })
