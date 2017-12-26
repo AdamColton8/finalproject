@@ -78,7 +78,7 @@
 [id='nav-toggle']:checked ~ .nav > .nav-toggle {
     left: auto;
     right: 2px;
-    top: 1em;
+    /* top: 1em; */
 }
 
 
