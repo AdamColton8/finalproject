@@ -1,7 +1,7 @@
 <template id="">
 
-    <main>
-        <div class="container">
+
+        <div class="container fadeIn animated">
 
             <div class="breadcrumb_wrap">
                 <ul class="breadcrumb">
@@ -18,28 +18,44 @@
                     <div class="field">
                         <label>Имя пользователя:</label>
                         <div class="input">
-                            <input type="text" name="" value="" id="login" />
+                            <input type="text"  name="" value="" id="login" required v-model="login"/>
                         </div>
                     </div>
 
                     <div class="field">
-                        <a href="#" id="forgot">Забыли пароль?</a>
                         <label>Пароль:</label>
                         <div class="input">
-                            <input type="password" name="" value="" id="pass" />
+                            <input type="password" name="" value="" id="pass" required v-model="password"/>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label>Email:</label>
+                        <div class="input">
+                            <input type="email" v-model="email" name="" value="" id="email" required/>
                         </div>
                     </div>
 
                     <div class="submit">
                         <button type="submit">Войти</button>
-                        <label id="remember">
-                            <input name="" type="checkbox" value="" /> Запомнить меня</label>
+                        <button type="submit">Зарегистрироваться</button>
                     </div>
 
                 </form>
             </div>
+
+
+                    <div>
+                        <h3>Введенная информация</h3>
+
+                        <p>Логин: {{login}}</p>
+                        <p>Пароль: {{password}}</p>
+                        <p>Email: {{email}}</p>
+
+                    </div>
+
+
         </div>
-    </main>
 
 
 </template>
@@ -50,34 +66,23 @@
         mounted() {
 
 
-
         },
-        created(){
+        created() {
+
 
         },
         data() {
 
             return {
-                faqList: [
-                    {
-
-                    },
-                    {
-
-                    }
-                ],
-                loginData: {
-                    username: '',
-                    password: '',
-                },
-
+                email: '',
+                login: '',
+                password: '',
+                date: '',
+                age: 18,
+                comment: ''
             }
 
         },
-        methods: {
-            login() {
-                console.log('login')
-            }
-        }
+        methods: {}
     }
 </script>

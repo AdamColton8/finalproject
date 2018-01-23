@@ -17,19 +17,16 @@
                 <div class="mySlides fade">
                     <div class="numbertext">1 / 3</div>
                     <img src="img/crm-img.png">
-                    <!-- <div class="text">Caption Text</div> -->
                 </div>
 
                 <div class="mySlides fade">
                     <div class="numbertext">2 / 3</div>
                     <img src="img/epam.jpg">
-                    <!-- <div class="text">Caption Two</div> -->
                 </div>
 
                 <div class="mySlides fade">
                     <div class="numbertext">3 / 3</div>
                     <img src="img/crm-img1.png">
-                    <!-- <div class="text">Caption Three</div> -->
                 </div>
 
                 <a class="prev" v-on:click="plusSlides(-1)">&#10094;</a>
@@ -47,10 +44,10 @@
                         <h2 class="auth-title ">Добро пожаловать!</h2>
                         <p class="auth-text jc_center">Войдите, чтобы получить доступ к панели Администратора</p>
                         <span class="btn-link" name="auth-btn">
-                            <a href="#" class="btn-link-i">Войти в&nbsp;личный кабинет</a>
+                            <router-link :to="{ name: 'Login' }" class="btn-link-i">Войти в личный кабинет</router-link>
                         </span>
                         <div class="auth-reg">
-                            <a href="#" class="auth-reg-user">Регистрация</a> нового пользователя
+                            <router-link :to="{ name: 'Login' }" class="auth-reg-user">Регистрация</router-link> нового пользователя
                         </div>
                     </div>
                 </section>

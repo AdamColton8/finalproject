@@ -43,7 +43,9 @@
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.2.5",
+    "express": "^4.16.2",
     "font-awesome": "^4.7.0",
+    "nodemailer": "^4.4.2",
     "save": "^2.3.2",
     "vue": "^2.5.13",
     "vue-router": "^3.0.1"

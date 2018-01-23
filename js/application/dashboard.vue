@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container fadeIn animated">
         <div>
             <input type="checkbox" id="nav-toggle" hidden>
 
@@ -50,7 +50,7 @@
                 <li>Login</li>
             </ul>
         </div>
-        <div class="row fadeIn animated">
+        <div class="row">
             <div class="col-1-3">
                 <div class="form_wrap">
                     <form v-on:submit.prevent="addRow">
@@ -129,6 +129,9 @@
 
 <script>
 
+
+
+
     export default {
         mounted() {
 
@@ -163,7 +166,6 @@
             return {
 
                 rows: [],
-                // selected: '',
                 newTask: {
                     taskName: '',
                     taskDescr: '',
@@ -190,8 +192,16 @@
                     taskName: '',
                     taskDescr: '',
                     taskStatus: '',
-                }
+                };
 
+                let transport = nodemailer.createTransport({
+                    host: "smtp.mailtrap.io",
+                    port: 2525,
+                    auth: {
+                        user: "2bfebfdc2ad624",
+                        pass: "b414a70c5b0a00"
+                    }
+                });
 
             },
             removeRow: function (index) {

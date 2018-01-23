@@ -1,6 +1,6 @@
 <template id="contacts">
 
-    <div>
+    <div class="fadeIn animated">
         <main class="contacts_wrap">
             <div class="container">
                 <div class="breadcrumb_wrap">
@@ -16,7 +16,7 @@
                         Немного о нас в картинках:
                     </h1>
                 </div>
-                <div class="gallery_wrap row fadeIn animated">
+                <div class="gallery_wrap row">
                     <a href="img/crm.png" data-fancybox="images" data-caption="Image 1">
                         <img src="img/crm.png"/>
                     </a>
