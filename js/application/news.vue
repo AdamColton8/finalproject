@@ -1,5 +1,14 @@
 <template>
-    <div class="fadeIn animated">
+    <div class="container fadeIn animated">
+
+        <div class="breadcrumb_wrap">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="#">News</a>
+                </li>
+                <li>Login</li>
+            </ul>
+        </div>
         <div class="blog-card">
             <div class="photo photo1"></div>
             <ul class="details">
@@ -281,7 +290,6 @@
                     width: 100%;
                     z-index: -1;
 
-                    /*POSITION*/
                     position: absolute;
                     left: -15px;
                     top: 0;

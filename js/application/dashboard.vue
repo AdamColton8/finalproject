@@ -130,6 +130,7 @@
 <script>
 
 
+    import swal from 'sweetalert';
 
 
     export default {
@@ -188,20 +189,34 @@
                 this.rows.push(Object.assign({
                     id: this.rows.length+1
                 }, this.newTask));
-                this.newTask = {
-                    taskName: '',
-                    taskDescr: '',
-                    taskStatus: '',
-                };
 
-                let transport = nodemailer.createTransport({
-                    host: "smtp.mailtrap.io",
-                    port: 2525,
-                    auth: {
-                        user: "2bfebfdc2ad624",
-                        pass: "b414a70c5b0a00"
+
+                this.$http.post('/send-email' , this.newTask).then(
+
+                    (response) => {
+
+                        if(response.data.response == true) {
+                            this.newTask = {
+                                taskName: '',
+                                taskDescr: '',
+                                taskStatus: '',
+                            };
+
+                            swal({
+                                icon: "success",
+                                text: "Success, email sent"
+                            });
+                        }
+                    },
+                    (error) => {
+
                     }
-                });
+
+
+                );
+
+
+
 
             },
             removeRow: function (index) {

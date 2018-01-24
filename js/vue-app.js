@@ -1,8 +1,11 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import VueResource from 'vue-resource';
 
 
-Vue.use(VueRouter)
+
+Vue.use(VueRouter);
+Vue.use(VueResource);
 
 const User = Vue.component('test-component', require('./application/component.vue').default);
 const Login = Vue.component('test-component', require('./application/login.vue').default);
